@@ -5,7 +5,7 @@
   "version": "2.0.3",
   "repository": {
     "type": "git",
-    "url": "git@github.com:handsontable/formula.js.git"
+    "url": "https://github.com/Aaron9466/formula.js.git"
   },
   "main": "index.js",
   "bin": {

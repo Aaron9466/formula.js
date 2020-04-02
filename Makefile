@@ -5,9 +5,11 @@ browserify = node_modules/.bin/browserify
 http-server = node_modules/.bin/http-server
 codeclimate-test-reporter = node_modules/.bin/codeclimate-test-reporter
 
-build:
-	@$(webpack)
-	@$(webpack) --config .config/production.js
+build-full:
+  webpack
+build-production:
+  webpack --config .config/production.js
+build:build-full build-production
 
 test:
 	@$(mocha) -u tdd -R mocha-spec-cov -r blanket
