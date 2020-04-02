@@ -2488,8 +2488,8 @@ exports.HYPGEOM.DIST = function(x, n, M, N, cumulative) {
 };
 
 exports.INTERCEPT = function(known_y, known_x) {
-  known_y = utils.parseNumberArray(known_y);
-  known_x = utils.parseNumberArray(known_x);
+  known_y = utils.parseNumberArray(utils.flatten(known_y));
+  known_x = utils.parseNumberArray(utils.flatten(known_x));
   if (utils.anyIsError(known_y, known_x)) {
     return error.value;
   }
